@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: client-config
+  profiles:
+    active: development
+  cloud:
+    config:
+      uri: http://localhost:8888
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
